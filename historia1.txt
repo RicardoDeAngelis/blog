@@ -4,8 +4,8 @@ git init para inicializar
 git config=muestra todas las configuraciones de git
 git config --list=muestra toda la configuracion por defecto
 git config --list --show-origin=muetra dnd estan las configuraciones guardadas
-git --config --global user.name=esto cambiara todos los usuarios globales (el nombre va entre comillas dobles)
-git --config --global user.email=aca colocamos el correo electronico en cmillas dobles
+git config --global user.name "name"=>esto cambiara todos los usuarios globales (el nombre va entre comillas dobles)
+git config --global user.email "email"=aca colocamos el correo electronico en cmillas dobles
 git log (nombre del archivo)=muestra el historial de commit
 git show(nombre del archivo)=muestra los cambios q se efectuaron en el archivo.
 git diff =muestra las diferencias entre 2 archivos.
@@ -28,7 +28,7 @@ git pull -> descarga y actualiza un estado del repositorio remoto al repositorio
 
 <!-- comandos para ver estados -->
 git status -> muestra el estado del commit antes de enviarse
-git log -> muestra un registro de los commits 
+git log -> muestra un registro de los commits
 git commit -am =  esto  hace un git add . de un archivo ya existente.
 
 GitHub
@@ -47,3 +47,23 @@ $ ssh-add ~/.ssh/id_rsa = agrega mi llave ssh privada a mi  repo.
 ~ =es nuetro home.
 
 $ git remote set-url  origin git@github.com:RicardoDeAngelis/hyperblog.git= cambiar la url del repo.
+
+git log --all --graph = muestra la representacion grafica de los commit y branch
+
+git log --all --graph --decorate --oneline = muestra todo mas comprimido.
+
+$ alias arbol="git log --all --graph --decorate --oneline"  = usamos alias para no escribir un comando tan largo.
+
+git tag = ver los tag que tenemos disponibles
+
+git tag -d nombre=elimina un tag del repo interno.
+
+git push origin :refs/tags/nombre = elimina tag de todos los repos.
+
+gitk:abre un software visual.
+
+fucionar ramas(flujo de trabajo)
+
+git clone (url del repo).
+primero  q nada se den¿be enviar una invitacion  o recibir una para poder
+ser colaborador ya sea por username o email esto se lo confifura en setting del repo.
