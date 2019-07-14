@@ -1,5 +1,5 @@
 configuracion de git
-hola 
+hola
 git init para
 git rm --cached archivo.html =>quitar de ram,el archivo aun no esta guadado en disco quita el add
 git rm archivo.txt.=>el archivo ya esta guardado en disco y lo remueve.
