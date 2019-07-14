@@ -1,6 +1,8 @@
 configuracion de git
 hola soy exequiel
-git init para inicializar
+git init para
+git rm --cached archivo.html =>quitar de ram,el archivo aun no esta guadado en disco quita el add
+git rm archivo.txt.=>el archivo ya esta guardado en disco y lo remueve.
 git config=muestra todas las configuraciones de git
 git config --list=muestra toda la configuracion por defecto
 git config --list --show-origin=muetra dnd estan las configuraciones guardadas
