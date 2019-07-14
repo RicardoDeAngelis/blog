@@ -1,8 +1,10 @@
 configuracion de git
-hola
+
 git init para
 git rm --cached archivo.html =>quitar de ram,el archivo aun no esta guadado en disco quita el add
 git rm archivo.txt.=>el archivo ya esta guardado en disco y lo remueve.
+
+pull request=>es un intermedio  de un merge sirve para q otros desarrolladores evaluen tu codigo
 
 git config=muestra todas las configuraciones de git
 git config --list=muestra toda la configuracion por defecto
@@ -69,4 +71,4 @@ fucionar ramas(flujo de trabajo)
 
 git clone (url del repo).
 primero  q nada se den¿be enviar una invitacion  o recibir una para poder
-ser colaborador ya sea por username o email esto se lo confifura en setting del repo.
+ser colaborador ya sea por username o email esto se lo configura en setting del repo.
