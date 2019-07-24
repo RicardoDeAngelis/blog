@@ -81,3 +81,58 @@ Readme.md es una excelente práctica
 README.md es una excelente práctica en tus proyectos, md significa Markdown es un especie de código que te permite cambiar la manera en que se ve un archivo de texto.
 
 Lo interesante de Markdown es que funciona en muchas páginas, por ejemplo la edición en Wikipedia; es un lenguaje intermedio que no es HTML, no es texto plano, es una manera de crear excelentes texto formateados.
+
+
+
+
+Git Rebase: Reorganizando el trabajo realizado
+
+El comando rebase es una mala práctica, nunca se debe usar, pero para efectos de curso te lo vamos a enseñar para que hagas tus propios experimentos. Con rebase puedes recoger todos los cambios confirmados en una rapa y ponerlos sobre otra.
+
+# Cambiamos a la rama que queremos traer los cambios
+git checkout experiment
+# Aplicamos rebase para traer los cambios de la rama que queremos 
+git rebase master
+
+
+
+Git Stash: Guardar cambios en memoria y recuperarlos después
+
+Cuando necesitamos regresar en el tiempo porque borramos alguna línea de código pero no queremos pasarnos a otra rama porque nos daría un error ya que debemos pasar ese “mal cambio” que hicimos a stage, podemos usar git stash para regresar el cambio anterior que hicimos.
+
+git stash es típico cuando estamos cambios que no merecen una rama o no merecen un rebase si no simplemente estamos probando algo y luego quieres volver rápidamente a tu versión anterior la cual es la correcta.
+
+
+
+git stash = guarda los cambios en memoria cuando no quieres hacer un commit aun
+git stash save “mensaje” = guarda un stach con mensaje
+git stash list = lista de todos stash
+git stash pop = trae de vuelta los cambios que teniamos guardados en el ultimo stash
+git stash apply stash@{n} = trae el stash que necesites con indicar su numero dentro de las llaves
+git stash drop = borra el ultimo stash
+git stash clear = borra todos los stash
+
+
+Git Clean: Limpiar tu proyecto de archivos no deseados
+
+A veces creamos archivos cuando estamos realizando nuestro proyecto que realmente no forman parte de nuestro directorio de trabajo, que no se debería agregar y lo sabemos.
+
+    Para saber qué archivos vamos a borrar tecleamos git clean --dry-run
+    Para borrar todos los archivos listados (que no son carpetas) tecleamos git clean -f
+
+
+    
+    git clean --dry-run: Para saber qué archivos vamos a borrar cuando estan repetidos o no son de nuestro proyecto
+    git clean -f: Para borrar todos los archivos listados (No borra las carpetas y lo que esta en .gitignore)
+
+
+
+Git cherry-pick: Traer commits viejos al head de un branch
+
+Existe un mundo alternativo en el cual vamos avanzando en una rama pero necesitamos en master uno de esos avances de la rama, para eso utilizamos el comando git cherry-pick IDCommit.
+
+cherry-pick es una mala práctica porque significa que estamos reconstruyendo la historia, usa cherry-pick con sabiduría. Si no sabes lo que estás haciendo ten mucho cuidado.
+
+Reconstruír commits en Git con amend
+
+A veces hacemos un commit, pero resulta que no queríamos mandarlo porque faltaba algo más. Utilizamos git commit --amend, amend en inglés es remendar y lo que hará es que los cambios que hicimos nos lo agregará al commit anterior
