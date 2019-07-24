@@ -1,6 +1,7 @@
 configuracion de git
 
 git init para
+git show-branch --all:mostrar branch ocultos
 git rm --cached archivo.html =>quitar de ram,el archivo aun no esta guadado en disco quita el add
 git rm archivo.txt.=>el archivo ya esta guardado en disco y lo remueve.
 git remote  add (origin)o(uptream)(link de un repo)=> sirve para agregar un repo  remoto.
@@ -53,7 +54,7 @@ $ ssh-add ~/.ssh/id_rsa = agrega mi llave ssh privada a mi  repo.
 ~ =es nuetro home.
 
 $ git remote set-url  origin git@github.com:RicardoDeAngelis/hyperblog.git= cambiar la url del repo.
-
+git remote -v => para ver las url de las repos
 git log --all --graph = muestra la representacion grafica de los commit y branch
 
 git log --all --graph --decorate --oneline = muestra todo mas comprimido.
@@ -68,7 +69,7 @@ git push origin :refs/tags/nombre = elimina tag de todos los repos.
 
 gitk:abre un software visual.
 
-fucionar ramas(flujo de trabajo)
+fusionar ramas(flujo de trabajo)
 
 git clone (url del repo).
 primero  q nada se den¿be enviar una invitacion  o recibir una para poder
